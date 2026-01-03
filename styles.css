@@ -1,0 +1,164 @@
+/* CSS Reset & Variables */
+:root {
+  --bg-color: #f9f9f7;
+  --text-color: #242424;
+  --accent-color: #1a8917;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  padding: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Main Hero */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding: 48px 0;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+  color: #555;
+  font-weight: 300;
+  max-width: 400px;
+  /* Optional: improve readability of longer text */
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--text-color);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #000;
+}
+
+/* Hero Image Area (Now Canvas) */
+.hero-image-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Ensure canvas doesn't overflow */
+}
+
+#network-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Footer */
+footer {
+  padding: 24px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+  color: #777;
+  display: flex;
+  gap: 24px;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+footer a:hover {
+  border-color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-image-wrapper {
+    order: 1;
+    max-height: 50vh;
+  }
+}
