@@ -1,0 +1,46 @@
+:root {
+    /* Colors */
+    --bg-color: #f9f9f7;
+    --text-primary: #242424;
+    --text-secondary: #555555;
+    --text-tertiary: #999999;
+
+    --accent-primary: #1a1a1a;
+    /* Deep Ink */
+    --accent-secondary: #5e6ad2;
+    /* Desaturated Blue/Purple */
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 64px;
+    --space-2xl: 96px;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.2, 0.0, 0.2, 1);
+    --transition-normal: 0.4s cubic-bezier(0.2, 0.0, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.2, 0.0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Optional: Basic dark mode foundation if we want it later, 
+     but PRD focused on "light layouts". Keeping minimal overrides for now if needed. 
+     Currently forcing the light aesthetic as per PRD "off-white or very light warm gray".
+  */
+}

@@ -1,0 +1,334 @@
+/* ... Previous styles ... */
+/* Paste previous content here plus new sections. 
+   To ensure I don't lose previous work, I will include EVERYTHING. 
+*/
+
+.home-container {
+    width: 100%;
+}
+
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 64px;
+}
+
+.hero-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 64px;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.hero-label {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+.hero-headline {
+    font-family: var(--font-sans);
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+}
+
+.hero-headline .highlight {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+.hero-subtext {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 480px;
+    font-weight: 300;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--text-primary);
+    color: #fff;
+    border: 1px solid var(--text-primary);
+}
+
+.btn-primary:hover {
+    background-color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-squared {
+    border-radius: 0;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-primary);
+    padding-left: 0;
+}
+
+.btn-ghost:hover {
+    color: var(--accent-secondary);
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform var(--transition-fast);
+}
+
+.btn-ghost:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Responsive Hero */
+@media (max-width: 960px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+        padding-top: 48px;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+
+    .hero-visual {
+        display: block;
+        transform: scale(0.8);
+    }
+}
+
+/* Interests Section */
+.interests-section,
+.work-section {
+    padding: 96px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-header {
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    color: var(--text-tertiary);
+    font-weight: 300;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.interest-card {
+    height: 100%;
+    min-height: 240px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+}
+
+.card-icon {
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateX(-5px) translateY(5px);
+    transition: all var(--transition-fast);
+}
+
+.interest-card:hover .card-icon {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 24px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 16px;
+}
+
+.card-stat {
+    color: var(--text-tertiary);
+}
+
+.card-cta {
+    color: var(--text-primary);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all var(--transition-fast);
+}
+
+.interest-card:hover .card-cta {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Work Section */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    /* Or row if horizontal card requested, but grid of 2 works well */
+    height: 100%;
+    overflow: hidden;
+}
+
+.work-content {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.work-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.work-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.work-tags {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.work-tag {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 99px;
+    color: var(--text-secondary);
+}
+
+.work-visual {
+    height: 200px;
+    width: 100%;
+    background-color: #fafafa;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-placeholder {
+    width: 100%;
+    height: 100%;
+    /* Gradient handled inline or here */
+}
+
+.center-cta {
+    text-align: center;
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}

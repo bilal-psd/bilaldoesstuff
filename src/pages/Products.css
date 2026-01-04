@@ -1,0 +1,143 @@
+.products-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+    min-height: 100vh;
+}
+
+.products-header {
+    padding: 120px 0 64px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 64px;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+.page-subtitle .highlight {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.tags-row {
+    display: flex;
+    gap: 12px;
+}
+
+.pill-tag {
+    padding: 6px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 99px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.project-row-card {
+    display: flex;
+    height: 320px;
+    padding: 0;
+    /* Override default GlassCard padding */
+}
+
+.project-visual {
+    width: 45%;
+    background-color: #f5f5f5;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-placeholder {
+    width: 100%;
+    height: 100%;
+    /* Gradient or image logic */
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+.project-content {
+    flex: 1;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+    font-family: var(--font-serif);
+}
+
+.project-problem {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+    .project-row-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-visual {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .page-title {
+        font-size: 3rem;
+    }
+}

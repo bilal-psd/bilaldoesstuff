@@ -1,0 +1,30 @@
+.footer {
+    padding: 48px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 24px;
+    justify-self: end;
+}
+
+.footer-socials a {
+    transition: color 0.2s;
+}
+
+.footer-socials a:hover {
+    color: var(--text-primary);
+}
